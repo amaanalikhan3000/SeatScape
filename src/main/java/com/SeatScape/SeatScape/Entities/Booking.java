@@ -31,4 +31,7 @@ public class Booking {
     private String paymentStatus;
 
     // Getters and Setters
+
+
+
 }

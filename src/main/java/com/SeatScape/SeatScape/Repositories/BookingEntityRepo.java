@@ -1,4 +1,4 @@
 package com.SeatScape.SeatScape.Repositories;
 
-public class BookingEntityRepo {
+public interface BookingEntityRepo {
 }

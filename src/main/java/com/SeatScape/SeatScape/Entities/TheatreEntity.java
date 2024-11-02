@@ -20,8 +20,8 @@ public class TheatreEntity {
 
 
     public static class SeatsLayout {
-        private int rows;
-        private int columns;
+        private int NoOfrows;
+        private int NoOfcolumns;
         private List<Integer> aislePositions;
 
     }

@@ -1,6 +1,8 @@
 package com.SeatScape.SeatScape.Entities;
 import jakarta.persistence.*;
-import java.util.Map;
+
+import java.util.List;
+
 import lombok.Data;
 
 @Data
@@ -15,7 +17,20 @@ public class Theatre {
     private String theatreName;
     private String location;
 
-    @Column(columnDefinition = "json")
-    private Map<String, Object> seatsLayout;
+    //@Column(columnDefinition = "json")
+    //private Map<String, Object> seatsLayout;
 
+  //  private TheatreEntity.SeatsLayout seatsLayout;
+
+    @Embedded
+    private seatsLayout seatsLayout;
 }
+    @Embeddable
+    @Data
+    class seatsLayout{
+        private int NoOfrows;
+        private int NoOfcolumns;
+        private List<Integer> aislePositions;
+    }
+
+
