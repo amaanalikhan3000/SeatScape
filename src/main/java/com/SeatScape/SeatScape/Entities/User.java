@@ -3,7 +3,7 @@ package com.SeatScape.SeatScape.Entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Map;
+
 
 @Entity
 @Table(name = "users")
@@ -16,7 +16,22 @@ public class User {
     private String email;
     private String password;
 
-    @Column(columnDefinition = "json")
-    private Map<String, Object> profileDetails; // JSON field to store details
-
+    @Embedded
+    private ProfileDetails profileDetails;
 }
+
+    // @Embedded
+    //private Map<String, Object> profileDetails;
+
+
+ //   private UserEntity.ProfileDetails profileDetails;
+ @Embeddable
+ @Data
+ class ProfileDetails {
+     private String address;
+     private String phoneNumber;
+     private String bio; // Add other specific fields as needed
+ }
+
+    // JSON field to store details
+
