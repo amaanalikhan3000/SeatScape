@@ -17,19 +17,14 @@ public class Theatre {
     private String theatreName;
     private String location;
 
-    //@Column(columnDefinition = "json")
-    //private Map<String, Object> seatsLayout;
-
-  //  private TheatreEntity.SeatsLayout seatsLayout;
-
     @Embedded
-    private seatsLayout seatsLayout;
+    private SeatsLayout seatsLayout;
 }
     @Embeddable
     @Data
-    class seatsLayout{
-        private int NoOfrows;
-        private int NoOfcolumns;
+    class SeatsLayout{
+        private int noOfrows;
+        private int noOfcolumns;
         private List<Integer> aislePositions;
     }
 
